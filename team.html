@@ -519,23 +519,8 @@ footer nav a:hover{color:var(--frozen)}
 (()=>{
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ================= 成員名單 —— 只要改這裡 =================
-     欄位說明:
-       name    英文姓名 (必填)
-       zh      中文名 / 稱謂 (可省略)
-       role    職稱, 例如 Principal Investigator / Masters Student / Undergraduate / Secretary / Lab Mascot / Postdoc
-       color   卡片代表色, 可用: mint 藍綠 / frozen 粉白 / sapphire 粉 / red1798 紅 / indigo (校友用)
-       photo   照片檔名, 放在 repo 的 team/ 資料夾裡, 例如 "chen.jpg"。留空或找不到就顯示英文縮寫
-       email   電子郵件 (可省略)
-       aff     所屬單位連結文字, 例如 "NTU · Physics" (可省略)
-       affUrl  該單位網址 (可省略)
-       meta    其他資訊, 可用 <b> 標粗體, <br> 換行 (可省略)
-       initials 縮寫, 不填會自動用姓名首字母
-       alumni  true = 放到校友區
-     新增成員 = 在清單加一段 {...},  然後把照片丟進 team/ 資料夾。
-  ============================================================ */
   const PEOPLE = [
-    { name:"Dr. Chun‑Chia Chen", zh:"陳俊嘉 博士", role:"Principal Investigator", color:"mint", photo:"",
+    { name:"Dr. Chun‑Chia Chen", zh:"陳俊嘉 博士", role:"Principal Investigator", color:"mint", photo:"chunchia.jpg",
       email:"chunchia.chen@g.iams.sinica.edu.tw", meta:"<b>Office</b> 308 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
     { name:"Dr. Shayne Bennetts", zh:"肖恩 博士", role:"Principal Investigator", color:"mint", photo:"Shayne Bennetts.jpg",
       email:"s.p.bennetts@g.iams.sinica.edu.tw", meta:"<b>Office</b> 307 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
