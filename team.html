@@ -197,6 +197,9 @@ main{position:relative; z-index:1; flex:1; width:min(1120px, 100%); margin:0 aut
   color:var(--ink-dim);
 }
 .card:hover .ph{border-color:color-mix(in srgb, var(--rc) 80%, transparent)}
+/* 照片框含真圖時: 用實線細框, 去掉虛線佔位樣式 */
+.card .ph:has(img){border-style:solid; border-color:rgba(255,235,237,.14); background:#0A1410; padding:0}
+.card:hover .ph:has(img){border-color:color-mix(in srgb, var(--rc) 70%, transparent)}
 .card .role{
   position:absolute; top:26px; left:26px;
   font-family:'Space Mono',monospace;
@@ -424,155 +427,10 @@ footer nav a:hover{color:var(--frozen)}
   </section>
 
   <div class="sec"><h2>Current Members</h2><span class="n">LAB 110</span></div>
-  <section class="grid" aria-label="Current members">
-
-    <article class="card" style="--rc:var(--mint)">
-      <div class="photo ph"><span class="ini">CC</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Principal Investigator</span>
-      <h3>Dr. Chun‑Chia Chen</h3>
-      <div class="zh">陳俊嘉 博士</div>
-      <div class="meta">
-        <b>Office</b> 308 · <b>Lab</b> 110<br>
-        <b>Tel</b> +886-2-2366-8215
-        <a href="mailto:chunchia.chen@g.iams.sinica.edu.tw" title="chunchia.chen@g.iams.sinica.edu.tw">chunchia.chen<span class="at">@</span>g.iams.sinica.edu.tw</a>
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--mint)">
-      <div class="photo ph"><span class="ini">SB</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Principal Investigator</span>
-      <h3>Dr. Shayne Bennetts</h3>
-      <div class="zh">肖恩 博士</div>
-      <div class="meta">
-        <b>Office</b> 307 · <b>Lab</b> 110<br>
-        <b>Tel</b> +886-2-2366-8215
-        <a href="mailto:s.p.bennetts@g.iams.sinica.edu.tw" title="s.p.bennetts@g.iams.sinica.edu.tw">s.p.bennetts<span class="at">@</span>g.iams.sinica.edu.tw</a>
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--frozen)">
-      <div class="photo ph"><span class="ini">TY</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Secretary</span>
-      <h3>Talia Yu</h3>
-      <div class="zh">于小姐</div>
-      <div class="meta">
-        <b>Office</b> 404<br>
-        <b>Tel</b> +886-2-2366-8923
-        <a href="mailto:tyu@as.edu.tw" title="tyu@as.edu.tw">tyu<span class="at">@</span>as.edu.tw</a>
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--sapphire)">
-      <div class="photo ph"><span class="ini">HY</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Masters Student</span>
-      <h3>Hao‑Rong Yang</h3>
-      <div class="zh">楊皓蓉</div>
-      <a class="aff" href="https://phys.ntu.edu.tw/" target="_blank" rel="noopener">NTU · Physics</a>
-      <div class="meta">
-        <b>Office</b> 110 · <b>Lab</b> 110<br>
-        <b>Tel</b> +886-2-2366-8215
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--sapphire)">
-      <div class="photo ph"><span class="ini">TH</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Undergraduate</span>
-      <h3>Ting‑Peng Huang</h3>
-      <div class="zh">黃定芃</div>
-      <a class="aff" href="https://phys.ntu.edu.tw/" target="_blank" rel="noopener">NTU · Physics</a>
-      <div class="meta">
-        <b>Office</b> 110 · <b>Lab</b> 110<br>
-        <b>Tel</b> +886-2-2366-8215
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--sapphire)">
-      <div class="photo ph"><span class="ini">JC</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Undergraduate</span>
-      <h3>Jie‑En Chen</h3>
-      <div class="zh">陳杰恩</div>
-      <a class="aff" href="https://phys.ntu.edu.tw/" target="_blank" rel="noopener">NTU · Physics</a>
-      <div class="meta">
-        <b>Office</b> 110 · <b>Lab</b> 110<br>
-        <b>Tel</b> +886-2-2366-8215
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--sapphire)">
-      <div class="photo ph"><span class="ini">WW</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Undergraduate</span>
-      <h3>Wen‑Ting Wang</h3>
-      <a class="aff" href="https://uwaterloo.ca/electrical-computer-engineering/" target="_blank" rel="noopener">Waterloo · EE</a>
-      <div class="meta">
-        <b>Office</b> 110 · <b>Lab</b> 110<br>
-        <b>Tel</b> +886-2-2366-8215
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--red1798)">
-      <div class="photo ph"><span class="ini">B</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Lab Mascot</span>
-      <h3>Baxter</h3>
-      <div class="meta">
-        <b>Office</b> Garden HQ · <b>Lab</b> 110
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--red1798)">
-      <div class="photo ph"><span class="ini">R</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role">Lab Mascot</span>
-      <h3>Rudolph</h3>
-      <div class="meta">
-        <b>Office</b> Garden HQ · <b>Lab</b> 110
-      </div>
-    </article>
-
-  </section>
+  <section class="grid" id="roster" aria-label="Current members"></section>
 
   <div class="sec alumni-sec"><h2>Alumni</h2><span class="n">WHERE THEY WENT</span></div>
-  <section class="grid alumni" aria-label="Alumni">
-
-    <article class="card" style="--rc:var(--indigo)">
-      <div class="photo ph"><span class="ini">TH</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role" style="color:var(--ink)">Postdoc</span>
-      <h3>Dr. Ting‑Wei Hsu</h3>
-      <div class="zh">許庭維 博士</div>
-      <div class="meta">
-        <b>Now at</b> ETH · Jonathan Home group
-      </div>
-    </article>
-
-    <article class="card" style="--rc:var(--indigo)">
-      <div class="photo ph"><span class="ini">YL</span><span class="cap">Photo</span></div>
-      <span class="glare" aria-hidden="true"></span>
-      <span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>
-      <span class="role" style="color:var(--ink)">Research Assistant</span>
-      <h3>Yu‑Chen Lu</h3>
-      <div class="zh">盧昱辰</div>
-      <div class="meta">&nbsp;</div>
-    </article>
-
-  </section>
+  <section class="grid alumni" id="alumni" aria-label="Alumni"></section>
 </main>
 
 <footer>
@@ -660,6 +518,98 @@ footer nav a:hover{color:var(--frozen)}
 <script>
 (()=>{
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ================= 成員名單 —— 只要改這裡 =================
+     欄位說明:
+       name    英文姓名 (必填)
+       zh      中文名 / 稱謂 (可省略)
+       role    職稱, 例如 Principal Investigator / Masters Student / Undergraduate / Secretary / Lab Mascot / Postdoc
+       color   卡片代表色, 可用: mint 藍綠 / frozen 粉白 / sapphire 粉 / red1798 紅 / indigo (校友用)
+       photo   照片檔名, 放在 repo 的 team/ 資料夾裡, 例如 "chen.jpg"。留空或找不到就顯示英文縮寫
+       email   電子郵件 (可省略)
+       aff     所屬單位連結文字, 例如 "NTU · Physics" (可省略)
+       affUrl  該單位網址 (可省略)
+       meta    其他資訊, 可用 <b> 標粗體, <br> 換行 (可省略)
+       initials 縮寫, 不填會自動用姓名首字母
+       alumni  true = 放到校友區
+     新增成員 = 在清單加一段 {...},  然後把照片丟進 team/ 資料夾。
+  ============================================================ */
+  const PEOPLE = [
+    { name:"Dr. Chun‑Chia Chen", zh:"陳俊嘉 博士", role:"Principal Investigator", color:"mint", photo:"chen.jpg",
+      email:"chunchia.chen@g.iams.sinica.edu.tw", meta:"<b>Office</b> 308 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
+    { name:"Dr. Shayne Bennetts", zh:"肖恩 博士", role:"Principal Investigator", color:"mint", photo:"bennetts.jpg",
+      email:"s.p.bennetts@g.iams.sinica.edu.tw", meta:"<b>Office</b> 307 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
+    { name:"Talia Yu", zh:"于小姐", role:"Secretary", color:"frozen", photo:"yu.jpg",
+      email:"tyu@as.edu.tw", meta:"<b>Office</b> 404<br><b>Tel</b> +886-2-2366-8923" },
+    { name:"Hao‑Rong Yang", zh:"楊皓蓉", role:"Masters Student", color:"sapphire", photo:"yang.jpg",
+      aff:"NTU · Physics", affUrl:"https://phys.ntu.edu.tw/", meta:"<b>Office</b> 110 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
+    { name:"Ting‑Peng Huang", zh:"黃定芃", role:"Undergraduate", color:"sapphire", photo:"huang.jpg",
+      aff:"NTU · Physics", affUrl:"https://phys.ntu.edu.tw/", meta:"<b>Office</b> 110 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
+    { name:"Jie‑En Chen", zh:"陳杰恩", role:"Undergraduate", color:"sapphire", photo:"chen-jieen.jpg",
+      aff:"NTU · Physics", affUrl:"https://phys.ntu.edu.tw/", meta:"<b>Office</b> 110 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
+    { name:"Wen‑Ting Wang", role:"Undergraduate", color:"sapphire", photo:"wang.jpg",
+      aff:"Waterloo · EE", affUrl:"https://uwaterloo.ca/electrical-computer-engineering/", meta:"<b>Office</b> 110 · <b>Lab</b> 110<br><b>Tel</b> +886-2-2366-8215" },
+    { name:"Baxter", role:"Lab Mascot", color:"red1798", photo:"baxter.jpg", initials:"B",
+      meta:"<b>Office</b> Garden HQ · <b>Lab</b> 110" },
+    { name:"Rudolph", role:"Lab Mascot", color:"red1798", photo:"rudolph.jpg", initials:"R",
+      meta:"<b>Office</b> Garden HQ · <b>Lab</b> 110" },
+
+    { name:"Dr. Ting‑Wei Hsu", zh:"許庭維 博士", role:"Postdoc", color:"indigo", photo:"hsu.jpg", alumni:true,
+      meta:"<b>Now at</b> ETH · Jonathan Home group" },
+    { name:"Yu‑Chen Lu", zh:"盧昱辰", role:"Research Assistant", color:"indigo", photo:"lu.jpg", alumni:true },
+  ];
+  /* ================= 名單結束 ================= */
+
+  const TEAM_DIR = 'team';   // repo 裡放照片的資料夾
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  function autoInitials(name){
+    const parts = name.replace(/^Dr\.?\s+/i,'').trim().split(/[\s‑-]+/).filter(Boolean);
+    return ((parts[0]?.[0]||'') + (parts[1]?.[0]||'')).toUpperCase() || name[0].toUpperCase();
+  }
+  function buildCard(p){
+    const c = document.createElement('article');
+    c.className = 'card';
+    c.style.setProperty('--rc', 'var(--'+(p.color||'mint')+')');
+    const ini = p.initials || autoInitials(p.name);
+    const roleStyle = p.alumni ? ' style="color:var(--ink)"' : '';
+    let html = '';
+    // 照片框:有 photo 就先試著載入, 失敗自動退回縮寫
+    if(p.photo){
+      html += '<div class="photo ph" data-ini="'+esc(ini)+'">'
+            +   '<img alt="'+esc(p.name)+'" loading="lazy" '
+            +        'style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block" '
+            +        'src="'+TEAM_DIR+'/'+encodeURIComponent(p.photo)+'">'
+            + '</div>';
+    } else {
+      html += '<div class="photo ph"><span class="ini">'+esc(ini)+'</span><span class="cap">Photo</span></div>';
+    }
+    html += '<span class="glare" aria-hidden="true"></span>'
+          + '<span class="orb" aria-hidden="true"><span class="ring"></span><span class="path"><i></i></span></span>'
+          + '<span class="role"'+roleStyle+'>'+esc(p.role||'')+'</span>'
+          + '<h3>'+esc(p.name)+'</h3>';
+    if(p.zh)  html += '<div class="zh">'+esc(p.zh)+'</div>';
+    if(p.aff) html += '<a class="aff" href="'+esc(p.affUrl||'#')+'" target="_blank" rel="noopener">'+esc(p.aff)+'</a>';
+    let meta = p.meta || '';
+    if(p.email){
+      const [u,d] = p.email.split('@');
+      meta += '<a href="mailto:'+esc(p.email)+'" title="'+esc(p.email)+'">'+esc(u)+'<span class="at">@</span>'+esc(d)+'</a>';
+    }
+    html += '<div class="meta">'+(meta || '&nbsp;')+'</div>';
+    c.innerHTML = html;
+    // 照片載入失敗 -> 換回縮寫佔位
+    const img = c.querySelector('img');
+    if(img){
+      img.addEventListener('error', ()=>{
+        const box = img.parentElement;
+        box.innerHTML = '<span class="ini">'+esc(ini)+'</span><span class="cap">Photo</span>';
+      });
+    }
+    return c;
+  }
+  const roster = document.getElementById('roster');
+  const alumniBox = document.getElementById('alumni');
+  PEOPLE.forEach(p => (p.alumni ? alumniBox : roster).appendChild(buildCard(p)));
+
   const cards = [...document.querySelectorAll('.card')];
 
   // staggered reveal on scroll
