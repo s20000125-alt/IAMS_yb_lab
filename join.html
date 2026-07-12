@@ -82,7 +82,8 @@ body.leave{animation:pageOut .55s cubic-bezier(.7,0,.5,1) both}
 
 /* ---------- showcase sections ---------- */
 .show{position:relative; z-index:2; min-height:100svh;
-  display:flex; align-items:center; justify-content:center}
+  display:flex; align-items:center; justify-content:center;
+  gap:clamp(36px,6vw,96px); padding:0 clamp(16px,4vw,48px)}
 .show .giant{position:absolute; top:-.52em; left:2vw; z-index:4; pointer-events:none;
   font-family:'Exo 2',sans-serif; font-weight:100; text-transform:uppercase;
   font-size:clamp(54px,10vw,150px); line-height:1; letter-spacing:.01em; white-space:nowrap;
@@ -90,21 +91,23 @@ body.leave{animation:pageOut .55s cubic-bezier(.7,0,.5,1) both}
   will-change:transform}
 .show .giant em{font-style:normal; color:var(--sc,var(--mint));
   text-shadow:0 0 30px color-mix(in srgb, var(--sc,#A6C9B6) 70%, transparent)}
-.show .vis{width:clamp(240px,40vw,430px); color:var(--sc,var(--mint));
+.show .vis{width:clamp(220px,32vw,390px); flex:none; color:var(--sc,var(--mint));
   filter:drop-shadow(0 0 26px color-mix(in srgb, var(--sc,#A6C9B6) 40%, transparent));
   will-change:transform}
 .show .vis svg{width:100%; height:auto; fill:none; stroke:currentColor;
   stroke-width:.8; stroke-linecap:round; stroke-linejoin:round}
-.show .meta{position:absolute; right:clamp(20px,6vw,80px); top:50%; transform:translateY(-50%);
-  max-width:250px; z-index:5}
-.show .meta .k{font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--sc,var(--mint));
+.show .meta{position:relative; max-width:360px; z-index:5}
+.show .meta .k{font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--sc,var(--mint));
   text-shadow:0 0 12px color-mix(in srgb, var(--sc,#A6C9B6) 50%, transparent)}
-.show .meta h2{margin-top:8px; font-family:'Exo 2',sans-serif; font-weight:300;
-  font-size:clamp(18px,2.4vw,24px); letter-spacing:.08em; color:#FFF6F4}
-.show .meta ul{list-style:none; margin-top:12px}
-.show .meta li{font-size:11.5px; line-height:2; color:var(--ink-dim); letter-spacing:.06em}
+.show .meta h2{margin-top:10px; font-family:'Exo 2',sans-serif; font-weight:300;
+  font-size:clamp(24px,3.4vw,34px); letter-spacing:.08em; color:#FFF6F4;
+  text-shadow:0 0 16px rgba(255,235,237,.25)}
+.show .meta ul{list-style:none; margin-top:14px}
+.show .meta li{font-size:14px; line-height:2.1; color:#C2B6D4; letter-spacing:.05em}
+.show .meta li::before{content:"·"; color:var(--sc,var(--mint)); margin-right:10px;
+  text-shadow:0 0 8px color-mix(in srgb, var(--sc,#A6C9B6) 70%, transparent)}
 .show .meta .go{display:inline-flex; align-items:center; justify-content:center;
-  margin-top:18px; width:46px; height:46px; border-radius:12px;
+  margin-top:20px; width:54px; height:54px; border-radius:14px; font-size:20px;
   border:1px solid var(--line); background:var(--panel-bg); backdrop-filter:blur(8px);
   color:var(--ink); font-size:18px; cursor:pointer;
   transition:border-color .25s, box-shadow .25s, transform .2s}
@@ -113,7 +116,7 @@ body.leave{animation:pageOut .55s cubic-bezier(.7,0,.5,1) both}
   box-shadow:0 0 22px color-mix(in srgb, var(--sc,#A6C9B6) 25%, transparent)}
 
 /* rotating badge + eye */
-.badge{position:absolute; left:clamp(16px,9vw,15vw); top:54%; z-index:6;
+.badge{position:absolute; left:clamp(12px,3vw,46px); top:54%; z-index:6;
   width:clamp(120px,14vw,160px); height:clamp(120px,14vw,160px);
   cursor:pointer; background:none; border:0; color:var(--ink); font-family:inherit}
 .badge .ring{position:absolute; inset:0; animation:spin 16s linear infinite}
@@ -217,13 +220,16 @@ footer nav{display:flex; flex-wrap:wrap; gap:4px 16px}
 footer a{text-decoration:none; transition:color .2s}
 footer a:hover{color:var(--frozen)}
 
+@media (max-width:1200px){
+  .badge{width:112px; height:112px}
+}
 @media (max-width:860px){
   .topbar{flex-direction:column; align-items:flex-start; gap:10px}
   .nav{justify-content:flex-start}
   .poster{padding-top:170px}
   .poster .introtxt{display:none}
   .show{flex-direction:column; justify-content:center; gap:26px; padding:90px 20px}
-  .show .meta{position:static; transform:none; text-align:center; max-width:none}
+  .show .meta{text-align:center; max-width:none}
   .badge{position:static; margin-top:6px}
   .ovl .x{top:auto; bottom:20px}
 }
