@@ -741,14 +741,25 @@ footer nav a:hover{color:var(--frozen)}
     player.classList.add('playing');
   }
   makeYT();                       // 立即以「靜音」狀態自動播放(瀏覽器允許)
-  // 瀏覽器禁止有聲自動播放: 在第一次互動(點擊/按鍵/捲動/觸控)時解除靜音
+  // 瀏覽器禁止有聲自動播放。策略:
+  //   1) 滑鼠一移動就「嘗試」解除靜音(寬鬆的瀏覽器會成功)
+  //   2) 第一次點擊/按鍵/捲動/觸控時再保底解除(所有瀏覽器都承認的手勢)
+  const tryUnmute=()=>{ const un=()=>{ cmd('unMute'); cmd('setVolume',[60]); cmd('playVideo'); };
+                        ytReady ? un() : setTimeout(un, 600); };
   let unmuted=false;
+  let lastTry=0;
+  const mm=()=>{                                                          // 嘗試性: 節流持續重試直到出聲
+    if(unmuted) return;
+    const n=Date.now(); if(n-lastTry<1200) return;
+    lastTry=n; tryUnmute();
+  };
+  addEventListener('mousemove', mm, {passive:true});
   function kick(){
     if(unmuted) return;
     unmuted=true;
-    const un=()=>{ cmd('unMute'); cmd('setVolume',[60]); cmd('playVideo'); };
-    ytReady ? un() : setTimeout(un, 600);
+    tryUnmute();                                                          // 保底, 一定成功
     ['pointerdown','keydown','wheel','touchstart','scroll'].forEach(t=> removeEventListener(t, kick));
+    removeEventListener('mousemove', mm);
   }
   ['pointerdown','keydown','wheel','touchstart','scroll'].forEach(t=>
     addEventListener(t, kick, {passive:true}));
