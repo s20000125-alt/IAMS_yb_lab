@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>加入我們 — IAMS 鐿原子實驗室</title>
+<title>加入我們 — 中研院鐿原子實驗室</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400&family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
@@ -75,10 +75,6 @@ body.leave{animation:pageOut .55s cubic-bezier(.7,0,.5,1) both}
   font-size:10.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-dim)}
 .poster .strap .b2 svg{width:15px; height:15px; animation:bob 1.7s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)}}
-.poster .introtxt{position:absolute; left:clamp(20px,6vw,80px); top:120px; max-width:34ch;
-  font-size:12px; line-height:1.85; color:var(--ink-dim);
-  opacity:0; animation:lineUp 1s ease .7s forwards}
-.poster .introtxt a{color:var(--mint); text-decoration:none; border-bottom:1px dashed rgba(166,201,182,.5)}
 
 /* ---------- showcase sections ---------- */
 .show{position:relative; z-index:2; min-height:100svh;
@@ -227,7 +223,6 @@ footer a:hover{color:var(--frozen)}
   .topbar{flex-direction:column; align-items:flex-start; gap:10px}
   .nav{justify-content:flex-start}
   .poster{padding-top:170px}
-  .poster .introtxt{display:none}
   .show{flex-direction:column; justify-content:center; gap:26px; padding:90px 20px}
   .show .meta{text-align:center; max-width:none}
   .badge{position:static; margin-top:6px}
@@ -235,7 +230,7 @@ footer a:hover{color:var(--frozen)}
 }
 @media (prefers-reduced-motion:reduce){
   body.enter,body.leave{animation:none}
-  .poster h1 .l,.poster .strap,.poster .introtxt{animation:none; opacity:1; transform:none}
+  .poster h1 .l,.poster .strap{animation:none; opacity:1; transform:none}
   .poster .strap .b2 svg{animation:none}
   .badge .ring{animation:none}
   .ovl,.ovl .wrap{transition:none}
@@ -246,26 +241,25 @@ footer a:hover{color:var(--frozen)}
 <div class="aurora" aria-hidden="true"></div>
 
 <header class="topbar">
-  <a class="logo" href="index_zh.html"><span class="mark"><i></i></span><span class="word">IAMS Yb Lab</span></a>
+  <a class="logo" href="index.html"><span class="mark"><i></i></span><span class="word">IAMS Yb Lab</span></a>
   <nav class="nav" aria-label="Main">
-    <a href="research_zh.html">研究方向</a>
-    <a href="team_zh.html">團隊成員</a>
-    <a href="publications-papers_zh.html">論文著作</a>
-    <a href="projects_zh.html">研究專案</a>
-    <a href="gallery_zh.html">實驗室相簿</a>
+    <a href="research.html">研究</a>
+    <a href="team.html">團隊</a>
+    <a href="publications-papers.html">著作</a>
+    <a href="projects.html">專案</a>
+    <a href="gallery.html">相簿</a>
     <a href="join_zh.html" class="now" aria-current="page">加入我們</a>
-    <a href="contact_zh.html">聯絡我們</a>
+    <a href="contact.html">聯絡</a>
     <a href="join.html" class="zh">English</a>
   </nav>
 </header>
 
 <!-- ============ poster ============ -->
-<section class="poster" aria-label="Join us">
-  <p class="introtxt">我們在量子科技的最前沿打造真實的實驗——超冷原子、精密原子鐘,以及光–物質介面。繼續往下看,或<a href="contact_zh.html">聯絡我們</a>。</p>
+<section class="poster" aria-label="加入我們">
   <h1><span class="l">加入</span><span class="l">我們<span class="dot">.</span></span></h1>
   <div class="strap">
     <span class="b1">成為實驗室的一員</span>
-    <span class="b2">往下滑
+    <span class="b2">向下捲動
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6 L8 11 L13 6"/></svg>
     </span>
   </div>
@@ -283,11 +277,11 @@ footer a:hover{color:var(--frozen)}
       <circle cx="100" cy="70" r="4"/><circle cx="168" cy="118" r="4"/><circle cx="35" cy="122" r="4"/>
     </svg>
   </div>
-  <button class="badge" data-open="ovl-degrees" aria-label="View degree programs">
+  <button class="badge" data-open="ovl-degrees" aria-label="檢視學位課程">
     <span class="ring" aria-hidden="true">
       <svg viewBox="0 0 100 100">
         <defs><path id="cp1" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
-        <text><textPath href="#cp1">VIEW DETAILS · VIEW DETAILS · VIEW DETAILS ·</textPath></text>
+        <text><textPath href="#cp1">查看詳情 · 查看詳情 · 查看詳情 · 查看詳情 ·</textPath></text>
       </svg>
     </span>
     <span class="eye" aria-hidden="true">
@@ -298,15 +292,15 @@ footer a:hover{color:var(--frozen)}
     </span>
   </button>
   <div class="meta">
-    <div class="k">01 · 與我們一起研究</div>
+    <div class="k">01 · 與我們一起做研究</div>
     <h2>學位課程</h2>
     <ul>
       <li>大學部專題</li>
       <li>碩士專題</li>
       <li>博士生(TIGP)</li>
-      <li>助學金 6–20k 台幣/月</li>
+      <li>助學金 每月 6–20k 新台幣</li>
     </ul>
-    <button class="go" data-open="ovl-degrees" aria-label="Open degree programs">↳</button>
+    <button class="go" data-open="ovl-degrees" aria-label="開啟學位課程">↳</button>
   </div>
 </section>
 
@@ -321,11 +315,11 @@ footer a:hover{color:var(--frozen)}
       <path d="M178 62l-14 5 5 6 9-11z"/>
     </svg>
   </div>
-  <button class="badge" data-open="ovl-internships" aria-label="View internships">
+  <button class="badge" data-open="ovl-internships" aria-label="檢視實習機會">
     <span class="ring" aria-hidden="true">
       <svg viewBox="0 0 100 100">
         <defs><path id="cp2" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
-        <text><textPath href="#cp2">VIEW DETAILS · VIEW DETAILS · VIEW DETAILS ·</textPath></text>
+        <text><textPath href="#cp2">查看詳情 · 查看詳情 · 查看詳情 · 查看詳情 ·</textPath></text>
       </svg>
     </span>
     <span class="eye" aria-hidden="true">
@@ -337,14 +331,14 @@ footer a:hover{color:var(--frozen)}
   </button>
   <div class="meta">
     <div class="k">02 · 1–3 個月</div>
-    <h2>實習機會</h2>
+    <h2>實習</h2>
     <ul>
       <li>原分所暑期實習(台灣)</li>
       <li>國科會 IIPP — 推薦</li>
       <li>TIGP 國際實習</li>
       <li>原分所國際實習</li>
     </ul>
-    <button class="go" data-open="ovl-internships" aria-label="Open internships">↳</button>
+    <button class="go" data-open="ovl-internships" aria-label="開啟實習機會">↳</button>
   </div>
 </section>
 
@@ -358,11 +352,11 @@ footer a:hover{color:var(--frozen)}
       <circle cx="48" cy="100" r="3"/><circle cx="152" cy="100" r="3"/>
     </svg>
   </div>
-  <button class="badge" data-open="ovl-jobs" aria-label="View research jobs">
+  <button class="badge" data-open="ovl-jobs" aria-label="檢視研究職缺">
     <span class="ring" aria-hidden="true">
       <svg viewBox="0 0 100 100">
         <defs><path id="cp3" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
-        <text><textPath href="#cp3">VIEW DETAILS · VIEW DETAILS · VIEW DETAILS ·</textPath></text>
+        <text><textPath href="#cp3">查看詳情 · 查看詳情 · 查看詳情 · 查看詳情 ·</textPath></text>
       </svg>
     </span>
     <span class="eye" aria-hidden="true">
@@ -376,12 +370,12 @@ footer a:hover{color:var(--frozen)}
     <div class="k">03 · 全職</div>
     <h2>研究職缺</h2>
     <ul>
-      <li>原分所 Junior Fellowship</li>
+      <li>原分所新進學者獎助</li>
       <li>博士後 / 研究科學家</li>
       <li>研發替代役</li>
       <li>研究助理 — 徵才中</li>
     </ul>
-    <button class="go" data-open="ovl-jobs" aria-label="Open research jobs">↳</button>
+    <button class="go" data-open="ovl-jobs" aria-label="開啟研究職缺">↳</button>
   </div>
 </section>
 
@@ -398,11 +392,11 @@ footer a:hover{color:var(--frozen)}
       <circle cx="152" cy="42" r="10" stroke-dasharray="2 4"/>
     </svg>
   </div>
-  <button class="badge" data-open="ovl-living" aria-label="View living in Taipei">
+  <button class="badge" data-open="ovl-living" aria-label="檢視在台北的生活">
     <span class="ring" aria-hidden="true">
       <svg viewBox="0 0 100 100">
         <defs><path id="cp4" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
-        <text><textPath href="#cp4">VIEW DETAILS · VIEW DETAILS · VIEW DETAILS ·</textPath></text>
+        <text><textPath href="#cp4">查看詳情 · 查看詳情 · 查看詳情 · 查看詳情 ·</textPath></text>
       </svg>
     </span>
     <span class="eye" aria-hidden="true">
@@ -417,39 +411,39 @@ footer a:hover{color:var(--frozen)}
     <h2>生活與訪問學者</h2>
     <ul>
       <li>訪問學者休假研究</li>
-      <li>台北生活費用</li>
+      <li>台北生活成本</li>
       <li>台灣學生免費宿舍</li>
-      <li>文化 · 自然 · 治安</li>
+      <li>文化 · 自然 · 安全</li>
     </ul>
-    <button class="go" data-open="ovl-living" aria-label="Open living in Taipei">↳</button>
+    <button class="go" data-open="ovl-living" aria-label="開啟在台北的生活">↳</button>
   </div>
 </section>
 
 <!-- ============ CTA + footer ============ -->
 <div class="cta">
-  <h2>準備好動手做真實驗了嗎?</h2>
-  <p>Short-term or long-term, local or international — tell us what you're curious about.</p>
-  <a class="btn" href="contact_zh.html">Contact Us</a>
+  <h2>準備好一起打造真實的實驗了嗎?</h2>
+  <p>不論短期或長期、本地或國際 — 告訴我們你對什麼感到好奇。</p>
+  <a class="btn" href="contact.html">聯絡我們</a>
 </div>
 
 <footer>
-  <nav aria-label="Text menu">
-    <a href="index_zh.html">首頁</a>
-    <a href="research_zh.html">研究方向</a>
-    <a href="team_zh.html">團隊成員</a>
-    <a href="publications-papers_zh.html">論文著作</a>
-    <a href="projects_zh.html">研究專案</a>
-    <a href="gallery_zh.html">實驗室相簿</a>
+  <nav aria-label="文字選單">
+    <a href="index.html">首頁</a>
+    <a href="research.html">研究</a>
+    <a href="team.html">團隊</a>
+    <a href="publications-papers.html">著作</a>
+    <a href="projects.html">專案</a>
+    <a href="gallery.html">相簿</a>
     <a href="join_zh.html">加入我們</a>
-    <a href="contact_zh.html">聯絡我們</a>
-    <a href="https://www.iams.sinica.edu.tw/" target="_blank" rel="noopener">原分所 ↗</a>
+    <a href="contact.html">聯絡</a>
+    <a href="https://www.iams.sinica.edu.tw/" target="_blank" rel="noopener">IAMS ↗</a>
   </nav>
   <div>中央研究院原子與分子科學研究所 · 電話 +886-2-2366-8236 · 台北市羅斯福路四段一號</div>
 </footer>
 
 <!-- ============ OVERLAYS ============ -->
-<div class="ovl" id="ovl-degrees" style="--oc:var(--mint)" role="dialog" aria-modal="true" aria-label="Degree programs">
-  <button class="x" aria-label="Close">✕</button>
+<div class="ovl" id="ovl-degrees" style="--oc:var(--mint)" role="dialog" aria-modal="true" aria-label="學位課程">
+  <button class="x" aria-label="關閉">✕</button>
   <div class="wrap">
     <div class="oh"><span class="k">01</span><h2>學位課程</h2></div>
     <div class="grid">
@@ -457,103 +451,117 @@ footer a:hover{color:var(--frozen)}
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.5 3h5M10.5 3v5.2L5.6 17a2.6 2.6 0 0 0 2.3 4h8.2a2.6 2.6 0 0 0 2.3-4l-4.9-8.8V3"/><path d="M7.8 14.5h8.4"/><circle cx="10.6" cy="17.6" r=".5"/><circle cx="13.6" cy="18.8" r=".5"/></svg></span>
         <span class="tag">大學部</span>
         <h3>大學部專題</h3>
-        <p>無須經驗——過去加入的同學來自機器人、光學、電機、機械工程,以及物理與化學等領域。專題會依你的興趣量身規劃,與團隊緊密合作,並以發表論文與國際研討會報告為目標。參見我們的<a href="projects_zh.html">研究專案</a>。</p>
-        <div class="pay">助學金 <b>6–12k 台幣/月</b> · 提供住宿支援</div>
+        <p>不需先備經驗 — 過去加入的學生來自機器人、光學、電機與機械工程,以及物理和化學等領域。
+           專題會依你的興趣量身規劃,與團隊密切合作,理想上能發表論文並在研討會上發表成果。
+           參見我們的<a href="projects.html">專案</a>。</p>
+        <div class="pay">助學金 <b>每月 6–12k 新台幣</b> · 提供住宿協助</div>
       </article>
       <article class="op" style="--c:var(--mint)" id="masters">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 2.5 8.6 12 13.2l9.5-4.6L12 4z"/><path d="M6.2 10.7v4.6c0 1.5 2.6 2.9 5.8 2.9s5.8-1.4 5.8-2.9v-4.6"/><path d="M21.5 8.6v5.4"/><circle cx="21.5" cy="15" r=".6"/></svg></span>
         <span class="tag">碩士</span>
         <h3>碩士專題</h3>
-        <p>涵蓋我們所有主要的<a href="projects_zh.html">研究方向</a>。你會先與團隊並肩起步,接著獨當一面主導專題、指導學弟妹、於國際期刊發表,並有機會前往歐洲、北美與日本的合作團隊駐點。建議先從較小的實習或大學部專題開始,找到最適合你的方向。</p>
-        <div class="pay">助學金 <b>10–20k 台幣/月</b> · 提供住宿支援</div>
+        <p>涵蓋我們所有主要<a href="projects.html">研究方向</a>。從與團隊並肩開始,接著獨當一面負責專題、
+           帶領學弟妹、在國際期刊發表,並與歐洲、北美和日本的合作團隊共事。我們建議先從較小的實習或大學部專題入門。</p>
+        <div class="pay">助學金 <b>每月 10–20k 新台幣</b> · 提供住宿協助</div>
       </article>
       <article class="op" style="--c:var(--mint)" id="phd">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.8 1.7 4.4 4.8 4.4 8.4 0 1.9-.4 3.7-1.1 5.2H8.7a12 12 0 0 1-1.1-5.2c0-3.6 1.6-6.7 4.4-8.4z"/><circle cx="12" cy="9.6" r="1.7"/><path d="M8.7 13.4 6 16.4v3l3.3-1.9M15.3 13.4l2.7 3v3l-3.3-1.9"/><path d="M12 17.5v3.7"/></svg></span>
         <span class="tag">博士</span>
         <h3>博士生</h3>
-        <p>主導一個大型專案與研究方向的重要部分——目標是達成可發表於 Nature、Science、PRL 或 PRX 的世界級成果。強烈建議先完成實驗 AMO 領域的碩士或實習。<a href="https://tigp.sinica.edu.tw/" target="_blank" rel="noopener">TIGP</a> 提供完整的博士支持方案。</p>
-        <div class="pay">TIGP 支持方案 <b>+ 視經驗加碼</b></div>
+        <p>負責一項大型專題與研究方向中的重要環節 — 目標是達到世界級成果,可望發表於 Nature、Science、PRL 或 PRX。
+           我們強烈建議先完成一段實驗 AMO(原子、分子與光學)碩士研究或實習。
+           <a href="https://tigp.sinica.edu.tw/" target="_blank" rel="noopener">TIGP(台灣國際研究生學程)</a>提供完整的博士支持。</p>
+        <div class="pay">TIGP 支持方案 <b>+ 視經驗提供更多</b></div>
       </article>
     </div>
   </div>
 </div>
 
-<div class="ovl" id="ovl-internships" style="--oc:var(--blush)" role="dialog" aria-modal="true" aria-label="Internships">
-  <button class="x" aria-label="Close">✕</button>
+<div class="ovl" id="ovl-internships" style="--oc:var(--blush)" role="dialog" aria-modal="true" aria-label="實習">
+  <button class="x" aria-label="關閉">✕</button>
   <div class="wrap">
-    <div class="oh"><span class="k">02</span><h2>實習機會</h2></div>
+    <div class="oh"><span class="k">02</span><h2>實習</h2></div>
     <div class="grid">
       <article class="op" style="--c:var(--blush)" id="iams-intern">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7"/></svg></span>
         <span class="tag">2 個月</span>
         <h3>原分所暑期實習</h3>
-        <p>開放全台學生,在原分所頂尖設施中進行前沿研究。無須 AMO 經驗。<a href="https://www.iams.sinica.edu.tw/ssr/" target="_blank" rel="noopener">計畫詳情</a>。</p>
-        <div class="pay">助學金 <b>20k 台幣/月</b>(稅前)<span class="dl">申請於 4 月截止</span></div>
+        <p>提供全台學生在原分所頂尖設施中進行前沿研究的機會,不需 AMO 經驗。
+           <a href="https://www.iams.sinica.edu.tw/ssr/" target="_blank" rel="noopener">課程詳情</a>。</p>
+        <div class="pay">助學金 <b>每月 20k 新台幣</b>(稅前)<span class="dl">申請於四月截止</span></div>
       </article>
       <article class="op" style="--c:var(--blush)" id="iipp">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.6 2.3 3.9 5.2 3.9 8.6s-1.3 6.3-3.9 8.6c-2.6-2.3-3.9-5.2-3.9-8.6s1.3-6.3 3.9-8.6z"/></svg></span>
         <span class="tag">1–3 個月</span><span class="tag alt">推薦</span>
         <h3>國科會國際實習(IIPP)</h3>
-        <p>面向全球學生的國家級計畫,可來台擔任研究人員最長 3 個月,通常為 6 至 12 月。名額有限且熱門——請及早申請。<a href="https://iipp.tw/" target="_blank" rel="noopener">IIPP 網站</a>。</p>
-        <div class="pay">助學金 <b>1k 台幣/日</b> · 可能另有比照其他計畫的補助<span class="dl">名額有限,額滿為止</span></div>
+        <p>這是一項國家級計畫,開放全球學生來台擔任研究人員最長 3 個月,通常在 6 至 12 月之間。名額有限且競爭激烈 — 請及早申請。
+           <a href="https://iipp.tw/" target="_blank" rel="noopener">IIPP 官網</a>。</p>
+        <div class="pay">助學金 <b>每日 1k 新台幣</b> · 額外補助可能比照其他計畫<span class="dl">名額有限,額滿為止</span></div>
       </article>
       <article class="op" style="--c:var(--blush)" id="tigp-intern">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 3.5 3 10.8l6.2 2.4L21 3.5zM21 3.5l-4.3 15.8-4.5-6.1M9.2 13.2v5.6l3-3.5"/></svg></span>
         <span class="tag">2 個月 · 暑期</span>
         <h3>TIGP 國際實習</h3>
-        <p>為全球學生提供在原分所進行兩個月的密集研究。<a href="https://tigp.sinica.edu.tw/" target="_blank" rel="noopener">TIGP 網站</a>。</p>
-        <div class="pay">助學金 <b>30k 台幣/月</b>(稅前)+ 交通補助<span class="dl">申請於 1 月截止</span></div>
+        <p>提供全球學生在原分所進行為期兩個月的密集研究。
+           <a href="https://tigp.sinica.edu.tw/" target="_blank" rel="noopener">TIGP 官網</a>。</p>
+        <div class="pay">助學金 <b>每月 30k 新台幣</b>(稅前)+ 交通補助<span class="dl">申請於一月截止</span></div>
       </article>
       <article class="op" style="--c:var(--blush)" id="iams-international">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="m15.4 8.6-2 5-5 2 2-5 5-2z"/><circle cx="12" cy="12" r=".6"/></svg></span>
         <span class="tag">2 個月</span>
         <h3>原分所國際實習</h3>
-        <p>支援不屬於其他實習計畫的國際學生。<a href="https://www.iams.sinica.edu.tw/iip/" target="_blank" rel="noopener">計畫詳情</a>。</p>
-        <div class="pay">助學金 <b>30k 台幣/月</b>(稅前)+ 交通補助<span class="dl">請於開始前至少 2 個月申請</span></div>
+        <p>支持未涵蓋於其他實習計畫的國際學生。
+           <a href="https://www.iams.sinica.edu.tw/iip/" target="_blank" rel="noopener">課程詳情</a>。</p>
+        <div class="pay">助學金 <b>每月 30k 新台幣</b>(稅前)+ 交通補助<span class="dl">請於開始前至少 2 個月申請</span></div>
       </article>
     </div>
   </div>
 </div>
 
-<div class="ovl" id="ovl-jobs" style="--oc:var(--teal)" role="dialog" aria-modal="true" aria-label="Research jobs">
-  <button class="x" aria-label="Close">✕</button>
+<div class="ovl" id="ovl-jobs" style="--oc:var(--teal)" role="dialog" aria-modal="true" aria-label="研究職缺">
+  <button class="x" aria-label="關閉">✕</button>
   <div class="wrap">
     <div class="oh"><span class="k">03</span><h2>研究職缺</h2></div>
     <div class="grid">
       <article class="op" style="--c:var(--teal)" id="fellowship">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9.4" r="5.4"/><path d="m9.6 13.9-2 6.3 4.4-2.4 4.4 2.4-2-6.3"/><path d="m12 6.6.9 1.8 2 .3-1.4 1.4.3 2-1.8-1-1.8 1 .3-2-1.4-1.4 2-.3.9-1.8z"/></svg></span>
-        <span class="tag">Fellowship</span>
-        <h3>原分所 Junior Fellowship</h3>
-        <p>為博士後邁向教授或研究員的研究人員設立的重要獎助——你可提出並主導自己的研究計畫,並有一個接待實驗室支持。<a href="http://www.iams.sinica.edu.tw/upload/Guidelines_for_IAMS_Junior_Fellowships.pdf" target="_blank" rel="noopener">申請辦法</a> · <a href="https://www.iams.sinica.edu.tw/en/?link=new&amp;id=406" target="_blank" rel="noopener">原分所資訊</a>。</p>
-        <div class="pay"><span class="dl">每年 8 月開放申請</span></div>
+        <span class="tag">獎助</span>
+        <h3>原分所新進學者獎助</h3>
+        <p>這是一項為由博士後邁向教授階段的研究人員設立的重要獎助 — 你可提出並主導自己的研究計畫,由一間主辦實驗室提供支持。
+           <a href="http://www.iams.sinica.edu.tw/upload/Guidelines_for_IAMS_Junior_Fellowships.pdf" target="_blank" rel="noopener">申請辦法</a> ·
+           <a href="https://www.iams.sinica.edu.tw/en/?link=new&amp;id=406" target="_blank" rel="noopener">原分所資訊</a>。</p>
+        <div class="pay"><span class="dl">每年八月開放申請</span></div>
       </article>
       <article class="op" style="--c:var(--teal)" id="postdoc">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.8 12h3.4l1.8-5.4 2.6 10.8 2.6-9 1.8 3.6h6.2"/><circle cx="12" cy="12" r="10" opacity=".35"/></svg></span>
         <span class="tag">博士後</span>
         <h3>博士後研究員 / 研究科學家</h3>
-        <p>在團隊中扮演引導研究的關鍵角色。適合具博士學位的資深 AMO 實驗學者;也非常歡迎有意合作的理論學者。<a href="contact_zh.html">寄來</a>你的履歷與著作清單——經費與簽證通常需要 3 個月以上。</p>
-        <div class="pay">支持 <b>60–84k 台幣/月</b>,視經驗而定</div>
+        <p>在團隊中扮演引導研究的關鍵角色。適合具博士學位、經驗豐富的 AMO 實驗學者;
+           也非常歡迎有意合作的理論學者。請<a href="contact.html">寄送</a>你的履歷與著作清單 — 經費與簽證需時 3 個月以上。</p>
+        <div class="pay">薪酬 <b>每月 60–84k 新台幣</b>,視經驗而定</div>
       </article>
       <article class="op" style="--c:var(--teal)" id="rnd-service">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 5.8v5.4c0 4.5 3 7.9 7 9.8 4-1.9 7-5.3 7-9.8V5.8L12 3z"/><path d="m9 11.8 2.2 2.2 3.8-4.4"/></svg></span>
         <span class="tag">替代役</span>
         <h3>研發替代役</h3>
-        <p>以全職研究人員身分完成你的兵役,參與我們的<a href="projects_zh.html">研究專案</a>之一。詳情請<a href="contact_zh.html">聯絡我們</a>。</p>
+        <p>以全職研究人員身分,在我們的<a href="projects.html">研究專案</a>中完成兵役。
+           詳情請<a href="contact.html">聯絡我們</a>。</p>
         <div class="pay">全職研究人員職位</div>
       </article>
       <article class="op" style="--c:var(--teal)" id="ra">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.5 6.2a4 4 0 0 1 5-1.3l-2.9 2.9.7 2.1 2.1.7 2.9-2.9a4 4 0 0 1-5.6 5.1L8.5 21a2 2 0 1 1-2.8-2.8l8.2-8.2a4 4 0 0 1 .6-3.8z"/></svg></span>
         <span class="tag">徵才中</span>
         <h3>研究助理</h3>
-        <p>需具備紮實的實驗物理或工程背景;曾在本實驗室或相關 AMO 實驗室有經驗者優先。<a href="https://www.iams.sinica.edu.tw/tw/?link=recru&amp;joid=4" target="_blank" rel="noopener">原分所徵才頁面</a>。</p>
-        <div class="pay">薪資 <b>38–56k 台幣/月</b>,依資歷與經驗</div>
+        <p>需具備扎實的實驗物理或工程背景;曾在本實驗室或相關 AMO 實驗室有經驗者尤佳。
+           <a href="https://www.iams.sinica.edu.tw/tw/?link=recru&amp;joid=4" target="_blank" rel="noopener">原分所徵才頁面</a>。</p>
+        <div class="pay">薪資 <b>每月 38–56k 新台幣</b>,依學經歷而定</div>
       </article>
     </div>
   </div>
 </div>
 
-<div class="ovl" id="ovl-living" style="--oc:var(--frozen)" role="dialog" aria-modal="true" aria-label="Living in Taipei">
-  <button class="x" aria-label="Close">✕</button>
+<div class="ovl" id="ovl-living" style="--oc:var(--frozen)" role="dialog" aria-modal="true" aria-label="在台北的生活">
+  <button class="x" aria-label="關閉">✕</button>
   <div class="wrap">
     <div class="oh"><span class="k">04</span><h2>生活與訪問學者</h2></div>
     <div class="grid" style="margin-bottom:16px">
@@ -561,42 +569,49 @@ footer a:hover{color:var(--frozen)}
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M9 8V5.6A1.6 1.6 0 0 1 10.6 4h2.8A1.6 1.6 0 0 1 15 5.6V8M8.6 8v12M15.4 8v12"/></svg></span>
         <span class="tag">短期 / 長期</span>
         <h3>訪問學者</h3>
-        <p>我們誠摯邀請資深學者考慮來本實驗室進行短期或長期休假研究。歡迎<a href="contact_zh.html">聯絡我們</a>討論合作機會。</p>
+        <p>我們誠摯邀請資深學者考慮來本實驗室進行短期或長期的休假研究。
+           歡迎<a href="contact.html">聯絡我們</a>洽談合作機會。</p>
       </article>
       <article class="op" style="--c:var(--frozen)" id="accommodation">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></span>
         <span class="tag">台灣學生</span>
-        <h3>住宿支援</h3>
-        <p>為全台其他大學、來台北進行短期實驗的學生提供獨立且免費的宿舍——讓你善用原分所的豐沛資源,免去繁瑣的行政程序。</p>
+        <h3>住宿協助</h3>
+        <p>為來自全台其他大學、來台北進行短期實驗的學生提供獨立且免費的宿舍 —
+           讓你善用原分所豐沛的資源,免去行政上的繁瑣。</p>
       </article>
     </div>
     <div class="living">
       <div class="blurb">
         <h3><span class="bico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 7V4M14 7V4M10 20v-3M14 20v-3M7 10H4M7 14H4M20 10h-3M20 14h-3"/></svg></span>先進經濟體</h3>
-        <p>全球科技領導者、世界晶片產業的核心——同時是最安全、最自由的居住地之一,<a href="https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)_per_capita" target="_blank" rel="noopener">人均 GDP(購買力平價)</a>名列前茅。低稅賦、高效率的全民健保,以及 24 小時的生活便利。</p>
+        <p>全球科技領導者,也是世界晶片產業的核心 — 這裡是全球最安全、最自由的居住地之一,並擁有名列前茅的
+           <a href="https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)_per_capita" target="_blank" rel="noopener">人均 GDP(購買力平價)</a>。
+           稅負低、全民健保高效、生活二十四小時便利。</p>
       </div>
       <div class="blurb">
         <h3><span class="bico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4c0-1 8-1 8 0M8.5 4.5C6.8 6 6 8.4 6 11c0 4 2 7 6 9 4-2 6-5 6-9 0-2.6-.8-5-2.5-6.5"/><path d="M9 9h6M9 13h6M12 4v16"/></svg></span>文化</h3>
-        <p>離實驗室僅數分鐘,就有數百家精緻又平價的餐廳——從台灣經典小吃到世界各地料理應有盡有。這裡也是學習中文的最佳地點之一。</p>
+        <p>距離實驗室僅數分鐘路程:數百間精緻又平價的餐廳 — 從台灣經典小吃到世界各地的料理應有盡有。
+           這裡也是學習華語的最佳地點之一。</p>
       </div>
       <div class="blurb">
         <h3><span class="bico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 19 6-10 4 6.5L16 12l5 7H3z"/><circle cx="17.5" cy="6" r="2"/></svg></span>自然之美</h3>
-        <p>「福爾摩沙」——意為美麗之島。雨林、崇山峻嶺與海灘皆近在咫尺,更有<a href="https://en.wikipedia.org/wiki/100_Peaks_of_Taiwan" target="_blank" rel="noopener">超過百座</a>逾 3000 公尺的高峰等你征服。</p>
+        <p>「福爾摩沙」— 意為美麗之島。雨林、崎嶇山巒與海灘都在不遠處,更擁有
+           <a href="https://en.wikipedia.org/wiki/100_Peaks_of_Taiwan" target="_blank" rel="noopener">逾百座</a>
+           海拔 3000 公尺以上的高峰。</p>
       </div>
     </div>
     <div class="costs">
-      <h3>平均生活費用</h3>
+      <h3>平均生活成本</h3>
       <table>
-        <tr><td>公寓(100 m²)</td><td>15–25k 台幣/月</td></tr>
-        <tr><td>單人房(12 m²),共用衛浴與廚房</td><td>約 10k 台幣/月</td></tr>
-        <tr><td>短期服務式套房(12 m²)</td><td>約 20k 台幣/月</td></tr>
-        <tr><td>伙食——外食,單人</td><td>約 10k 台幣/月</td></tr>
-        <tr><td>伙食——自炊,小家庭</td><td>約 12k 台幣/月</td></tr>
-        <tr><td>交通</td><td>約 2k 台幣/月</td></tr>
-        <tr><td>全民健保(居留簽證滿 6 個月)</td><td>約 1k 台幣/月</td></tr>
-        <tr><td>4G 吃到飽 + 通話</td><td>約 500 台幣/月</td></tr>
+        <tr><td>公寓(100 平方公尺)</td><td>每月 15–25k 新台幣</td></tr>
+        <tr><td>單人套房(12 平方公尺),共用衛浴與廚房</td><td>約 10k 新台幣/月</td></tr>
+        <tr><td>短期附服務獨立套房(12 平方公尺)</td><td>約 20k 新台幣/月</td></tr>
+        <tr><td>飲食 — 外食,單人</td><td>約 10k 新台幣/月</td></tr>
+        <tr><td>飲食 — 自炊,小家庭</td><td>約 12k 新台幣/月</td></tr>
+        <tr><td>交通</td><td>約 2k 新台幣/月</td></tr>
+        <tr><td>全民健保(居留簽證滿 6 個月)</td><td>約 1k 新台幣/月</td></tr>
+        <tr><td>4G 上網吃到飽 + 通話</td><td>約 500 新台幣/月</td></tr>
       </table>
-      <p class="note">氣候:約 18 °C(冬)至 35 °C(夏) · 濕度約 70–80%</p>
+      <p class="note">氣候:約 18°C(冬)至約 35°C(夏)· 濕度約 70–80%</p>
     </div>
   </div>
 </div>
