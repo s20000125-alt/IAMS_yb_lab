@@ -75,10 +75,6 @@ body.leave{animation:pageOut .55s cubic-bezier(.7,0,.5,1) both}
   font-size:10.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-dim)}
 .poster .strap .b2 svg{width:15px; height:15px; animation:bob 1.7s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)}}
-.poster .introtxt{position:absolute; left:clamp(20px,6vw,80px); top:120px; max-width:34ch;
-  font-size:12px; line-height:1.85; color:var(--ink-dim);
-  opacity:0; animation:lineUp 1s ease .7s forwards}
-.poster .introtxt a{color:var(--mint); text-decoration:none; border-bottom:1px dashed rgba(166,201,182,.5)}
 
 /* ---------- showcase sections ---------- */
 .show{position:relative; z-index:2; min-height:100svh;
@@ -227,7 +223,6 @@ footer a:hover{color:var(--frozen)}
   .topbar{flex-direction:column; align-items:flex-start; gap:10px}
   .nav{justify-content:flex-start}
   .poster{padding-top:170px}
-  .poster .introtxt{display:none}
   .show{flex-direction:column; justify-content:center; gap:26px; padding:90px 20px}
   .show .meta{text-align:center; max-width:none}
   .badge{position:static; margin-top:6px}
@@ -235,7 +230,7 @@ footer a:hover{color:var(--frozen)}
 }
 @media (prefers-reduced-motion:reduce){
   body.enter,body.leave{animation:none}
-  .poster h1 .l,.poster .strap,.poster .introtxt{animation:none; opacity:1; transform:none}
+  .poster h1 .l,.poster .strap{animation:none; opacity:1; transform:none}
   .poster .strap .b2 svg{animation:none}
   .badge .ring{animation:none}
   .ovl,.ovl .wrap{transition:none}
@@ -261,8 +256,6 @@ footer a:hover{color:var(--frozen)}
 
 <!-- ============ poster ============ -->
 <section class="poster" aria-label="Join us">
-  <p class="introtxt">We build real experiments at the frontier of quantum technology — ultracold atoms,
-     precision clocks, and light–matter interfaces. Keep scrolling, or <a href="contact.html">contact us</a>.</p>
   <h1><span class="l">Join</span><span class="l">Us<span class="dot">.</span></span></h1>
   <div class="strap">
     <span class="b1">Be a part of our lab</span>
