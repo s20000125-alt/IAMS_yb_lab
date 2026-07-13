@@ -210,6 +210,24 @@ body.leave{animation:pageOut .55s cubic-bezier(.7,0,.5,1) both}
     <div class="lsec-head"><h2>All Publications</h2><span class="ln" id="pubTotal"></span></div>
     <div id="pubList"></div>
   </section>
+
+  <section class="list-wrap" aria-label="PhD theses">
+    <div class="lsec-head"><h2>PhD Theses</h2><span class="ln">PDF</span></div>
+    <div id="thesisList">
+      <div class="pub"><div class="py">2022</div><div>
+        <div class="pt"><a href="Theses/Chun-Chia_Chen_PhD_thesis.pdf" target="_blank" rel="noopener">Chun-Chia Chen — PhD Thesis</a></div>
+        <div class="pv"><a href="Theses/Chun-Chia_Chen_PhD_thesis.pdf" target="_blank" rel="noopener">PDF</a></div></div></div>
+      <div class="pub"><div class="py">2019</div><div>
+        <div class="pt"><a href="Theses/Shayne_Bennetts_PhD_thesis.pdf" target="_blank" rel="noopener">Shayne Bennetts — PhD Thesis</a></div>
+        <div class="pv"><a href="Theses/Shayne_Bennetts_PhD_thesis.pdf" target="_blank" rel="noopener">PDF</a></div></div></div>
+      <div class="pub"><div class="py">—</div><div>
+        <div class="pt"><a href="Theses/Sheng_Zhou_PhD_thesis.pdf" target="_blank" rel="noopener">Sheng Zhou — PhD Thesis</a></div>
+        <div class="pv"><a href="Theses/Sheng_Zhou_PhD_thesis.pdf" target="_blank" rel="noopener">PDF</a></div></div></div>
+      <div class="pub"><div class="py">—</div><div>
+        <div class="pt"><a href="Theses/Simon_Stellmer_PhD_thesis.pdf" target="_blank" rel="noopener">Simon Stellmer — PhD Thesis</a></div>
+        <div class="pv"><a href="Theses/Simon_Stellmer_PhD_thesis.pdf" target="_blank" rel="noopener">PDF</a></div></div></div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -247,6 +265,7 @@ window.YB_PAPERS = [
  },
  {
   "title": "The path to continuous Bose\u2013Einstein condensation",
+  "pdf": "Papers/path-to-continuous-BEC.pdf",
   "journal": "Adv. At. Mol. Opt. Phys.",
   "authors": "C.-C. Chen*, S. Bennetts*, F. Schreck",
   "year": 2023,
@@ -254,6 +273,7 @@ window.YB_PAPERS = [
  },
  {
   "title": "Continuous Bose\u2013Einstein condensation",
+  "pdf": "Papers/continuous-BEC.pdf",
   "journal": "Nature",
   "authors": "C.-C. Chen, R. Gonz\u00e1lez Escudero, J. Min\u00e1\u0159, B. Pasquiou, S. Bennetts, F. Schreck",
   "year": 2022,
@@ -318,6 +338,7 @@ window.YB_ALL = [
 "y": 2024,
 "a": "F. Fam\u00e0, S. Zhou, B. Heizenreder, M. Tang, S. Bennetts, S. B. J\u00e4ger, S. A. Sch\u00e4ffer, F. Schreck*",
 "t": "Continuous cavity QED with an atomic beam",
+"p": "Papers/continuous-cavity-QED-atomic-beam.pdf",
 "v": "Phys. Rev. A 110, 063721",
 "u": "https://doi.org/10.1103/PhysRevA.110.063721"
 },
@@ -340,6 +361,7 @@ window.YB_ALL = [
 "y": 2024,
 "a": "J. Samland, S. Bennetts, C.-C. Chen, R. Gonz\u00e1lez Escudero, F. Schreck, B. Pasquiou*",
 "t": "Optical pumping of 5s4d \u00b9D\u2082 strontium atoms for laser cooling and imaging",
+"p": "Papers/optical-pumping-1D2-strontium.pdf",
 "v": "Phys. Rev. Research 6, 013319",
 "u": "https://doi.org/10.1103/PhysRevResearch.6.013319",
 "x": "https://arxiv.org/abs/2311.02941"
@@ -348,6 +370,7 @@ window.YB_ALL = [
 "y": 2023,
 "a": "C.-C. Chen*, S. Bennetts*, F. Schreck",
 "t": "The path to continuous Bose\u2013Einstein condensation",
+"p": "Papers/path-to-continuous-BEC.pdf",
 "v": "Adv. At. Mol. Opt. Phys. 72, 361\u2013430 \u2014 book chapter",
 "u": "https://doi.org/10.1016/bs.aamop.2023.04.004"
 },
@@ -355,6 +378,7 @@ window.YB_ALL = [
 "y": 2022,
 "a": "C.-C. Chen, R. Gonz\u00e1lez Escudero, J. Min\u00e1\u0159, B. Pasquiou, S. Bennetts, F. Schreck*",
 "t": "Continuous Bose\u2013Einstein condensation",
+"p": "Papers/continuous-BEC.pdf",
 "v": "Nature 606, 683\u2013687",
 "u": "https://doi.org/10.1038/s41586-022-04731-z",
 "x": "https://arxiv.org/abs/2012.07605"
@@ -370,6 +394,7 @@ window.YB_ALL = [
 "y": 2021,
 "a": "R. Gonz\u00e1lez Escudero, C.-C. Chen, S. Bennetts, B. Pasquiou, F. Schreck*",
 "t": "Steady-state magneto-optical trap of fermionic strontium on a narrow-line transition",
+"p": "Papers/steady-state-MOT-fermionic-Sr.pdf",
 "v": "Phys. Rev. Research 3, 033159",
 "u": "https://doi.org/10.1103/PhysRevResearch.3.033159"
 },
@@ -597,7 +622,7 @@ window.YB_ALL = [
   const books = papers.map((p,i)=>{
     const pair = JC[p.journal] || JC._default;
     const el = document.createElement('a');
-    el.className='book'; el.href=p.doi; el.target='_blank'; el.rel='noopener';
+    el.className='book'; el.href=p.pdf||p.doi; el.target='_blank'; el.rel='noopener';
     el.style.setProperty('--c1',pair[0]); el.style.setProperty('--c2',pair[1]);
     el.innerHTML =
       '<div class="cover"><div class="sheen"></div><div class="c-inner">'+
@@ -633,7 +658,9 @@ window.YB_ALL = [
       document.getElementById('count').textContent=(Math.round(focus)+1)+' / '+N;
       document.getElementById('nowTitle').innerHTML=
         '<div class="nt">'+esc(cur.title)+'</div><div class="nm">'+esc(cur.authors)+' \u00b7 '+
-        esc(cur.journal)+' '+cur.year+' \u00b7 <a href="'+cur.doi+'" target="_blank" rel="noopener">Open paper \u2197</a></div>';
+        esc(cur.journal)+' '+cur.year+' \u00b7 '+
+        (cur.pdf ? '<a href="'+cur.pdf+'" target="_blank" rel="noopener">PDF \u2197</a> \u00b7 ' : '')+
+        '<a href="'+cur.doi+'" target="_blank" rel="noopener">DOI \u2197</a></div>';
     }
   }
   function animate(){
@@ -645,7 +672,9 @@ window.YB_ALL = [
   function go(i){ target=Math.max(0,Math.min(N-1,i)); requestAnimationFrame(animate); }
 
   books.forEach((b,i)=> b.addEventListener('click', ev=>{
-    if(i!==Math.round(focus)){ ev.preventDefault(); go(i); }
+    if(moved){ ev.preventDefault(); ev.stopPropagation(); return; }   // 拖曳中,不觸發
+    if(i!==Math.round(focus)){ ev.preventDefault(); go(i); }          // 非中央本: 先切過去
+    // 中央本: 不 preventDefault,讓 <a href=DOI> 正常在新分頁開啟
   }));
   document.getElementById('prev').addEventListener('click', ()=> go(Math.round(target)-1));
   document.getElementById('next').addEventListener('click', ()=> go(Math.round(target)+1));
@@ -668,7 +697,7 @@ window.YB_ALL = [
   const perCard=(isMobile?90:150);
   wrap.addEventListener('pointerdown', e=>{
     dragging=true; moved=false; startX=e.clientX; startFocus=focus;
-    wrap.classList.add('dragging'); wrap.setPointerCapture(e.pointerId);
+    wrap.classList.add('dragging');
   });
   wrap.addEventListener('pointermove', e=>{
     if(!dragging) return;
@@ -681,7 +710,8 @@ window.YB_ALL = [
   function endDrag(){ if(!dragging) return; dragging=false; wrap.classList.remove('dragging'); go(Math.round(focus)); }
   wrap.addEventListener('pointerup', endDrag);
   wrap.addEventListener('pointercancel', endDrag);
-  wrap.addEventListener('click', e=>{ if(moved){ e.preventDefault(); e.stopPropagation(); moved=false; } }, true);
+  // click 事件在 pointerup 之後觸發; moved 於下一個 tick 重置,確保 book 的 click 判斷讀得到
+  wrap.addEventListener('click', ()=> setTimeout(()=>{ moved=false; }, 0));
 
 
   // ---------- the full reading list ----------
@@ -694,11 +724,12 @@ window.YB_ALL = [
     for(const it of window.YB_ALL){
       if(it.sec && it.sec!=='Recent') html+='<div class="lsub">'+esc(it.sec)+'</div>';
       const ax = it.x ? ' <a href="'+it.x+'" target="_blank" rel="noopener">arXiv</a>' : '';
+      const px = it.p ? ' <a href="'+it.p+'" target="_blank" rel="noopener">PDF</a>' : '';
       html+='<div class="pub">'
         +'<div class="py">'+it.y+'</div>'
         +'<div><div class="pt"><a href="'+it.u+'" target="_blank" rel="noopener">'+esc(it.t)+'</a></div>'
         +'<div class="pa">'+hi(it.a)+'</div>'
-        +'<div class="pv">'+esc(it.v)+ax+'</div></div>'
+        +'<div class="pv">'+esc(it.v)+px+ax+'</div></div>'
         +'</div>';
     }
     box.innerHTML=html;
